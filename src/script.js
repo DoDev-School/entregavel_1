@@ -3,6 +3,35 @@
 
 //ESCREVA SEU CÓDIGO AQUI!!
 
+function Calculadora(numero1, numero2, operacao){
+  let resultado = 0;
+  switch (operacao) {
+    case '+':
+      resultado = Number(numero1) + Number(numero2)
+      break;
+    
+    case '-':
+      resultado = Number(numero1) - Number(numero2)
+      break;
+    
+    case '*':
+      resultado = Number(numero1) * Number(numero2)
+      break;
+    
+    case '/':
+      resultado = Number(numero1) / Number(numero2)
+      break;
+    case 'e':
+      resultado = 1;
+      for(let contador = 0; contador < Number(numero2); contador++ ){
+        resultado *= Number(numero1) 
+      }
+    default:
+      break;
+  }
+  return resultado;
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -32,31 +61,3 @@ function calcular() {
   }
 }
 
-function Calculadora(numero1, numero2, operacao){
-  let resultado = 0;
-  switch (operacao) {
-    case '+':
-      resultado = Number(numero1) + Number(numero2)
-      break;
-    
-    case '-':
-      resultado = Number(numero1) - Number(numero2)
-      break;
-    
-    case '*':
-      resultado = Number(numero1) * Number(numero2)
-      break;
-    
-    case '/':
-      resultado = Number(numero1) / Number(numero2)
-      break;
-    case 'e':
-      resultado = 1;
-      for(let contador = 0; contador < Number(numero2); contador++ ){
-        resultado *= Number(numero1) 
-      }
-    default:
-      break;
-  }
-  return resultado;
-}
